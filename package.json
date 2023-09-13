@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "json-schema-faker-cli": "^5.0.6"
+  }
+}
