@@ -1,6 +1,8 @@
 # `tap-testdata`
 
 A Singer tap used to generate fake data to mock other taps.
+The main use case is for mocking taps in test pipelines where you don't have credentials or want to interact with sensitive data.
+The tap will generate fake data that conforms the the json schema supplied by the tap being mocked.
 
 Usually a tap is run in [discovery mode](https://hub.meltano.com/singer/spec#discovery-mode) to generate a catalog file which is then used as its own input `--catalog` when running a pipeline job.
 This tap uses a catalog file from another tap to generate fake data that looks like it came from that tap.
@@ -9,7 +11,8 @@ For this tap you should instead pass the catalog file from the tap you would lik
 For example:
 
 ```bash
-tap-testdata --config=config --catalog=tap_github_catalog.json
+tap-github --config=gh_config.json --discover > tap_github_catalog.json
+tap-testdata --config=test_data_config.json --catalog=tap_github_catalog.json
 ```
 
 Built with the [Meltano Singer SDK](https://sdk.meltano.com).
