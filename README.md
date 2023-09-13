@@ -49,7 +49,7 @@ A full list of supported settings and capabilities is available by running: `tap
 
 ## Installation
 
-This tap calls the npm package `json-schema-faker-cli` to generate fake data.
+This tap calls the npm package [`json-schema-faker-cli`](https://github.com/oprogramador/json-schema-faker-cli) to generate fake data.
 You need to install the npm package before you run the tap.
 
 ```
