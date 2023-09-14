@@ -19,6 +19,13 @@ class TapTestData(Tap):
             required=True,
             description="The amount of records to generate for each stream.",
         ),
+        th.Property(
+            "generator_options",
+            th.ObjectType(),
+            required=False,
+            default={},
+            description="The [json-schema-faker options](https://github.com/json-schema-faker/json-schema-faker/tree/master/docs#available-options) to use when generating data.",
+        ),
     ).to_dict()
 
     def discover_streams(self) -> list[TestDataStream]:
