@@ -12,7 +12,7 @@ license = "Apache-2.0"
 
 [tool.poetry.dependencies]
 python = "<3.12,>=3.8"
-singer-sdk = { version="^0.31.1" }
+singer-sdk = { version="^0.33.0" }
 fs-s3fs = { version = "^1.1.1", optional = true }
 nodejs-bin = {extras = ["cmd"], version = "^18.4.0a4"}
 hypothesis-jsonschema = "^0.22.1"
@@ -20,7 +20,7 @@ jsf = "^0.8.0"
 
 [tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
-singer-sdk = { version="^0.31.1", extras = ["testing"] }
+singer-sdk = { version="^0.33.0", extras = ["testing"] }
 
 [tool.poetry.extras]
 s3 = ["fs-s3fs"]
